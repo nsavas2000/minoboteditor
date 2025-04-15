@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniBot Renk Kartları</title>
+    <link rel="icon" type="image/svg+xml" href="images/icon.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/colorpagestyle.css">
+    
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/acorn.js"></script>
+    <script src="js/interpreter.js"></script>
+    <script src="js/interpreterfunctionsColor.js"></script> 
+    
+    <script src="js/fileoperations.js"></script>    
+    <script src="js/bee-uploader.js"></script>
+
+    <script src="js/ble-libraries/p5.min.js"></script>
+    <script src="js/ble-libraries/p5.ble.js"></script>
+    <script src="js/bluetooth.js"></script>
+</head>
+<body>
+    <div class="app-container">
+
+
+        <img class="minilogo" src="images/minilogo.png" onclick="location.href='index.html'">
+         <button type="button" class="btn menuButton" id="buttonConnectBLE" onClick="ConnectionBluetooth();" data-toggle="tooltip" data-placement="bottom" title="Connect BLE">
+            <img src="images/bleConn.png" style="height: 3rem"> 
+        </button>
+        
+        <div class="camera-section">
+            <div class="video-frame">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas"></canvas>
+                <div class="target-box"></div>
+            </div>
+            
+            <div class="button-container">
+                <button id="connect" class="action-btn" title="Kamerayı Aç">
+                    <i class="fas fa-video"></i>
+                </button>
+                <button id="capture" class="action-btn" title="Rengi Yakala">
+                    <i class="fas fa-camera"></i>
+                </button>
+                <button id="btRun" class="action-btn" title="Run" onclick="RunBee()">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+        
+        <p id="result">Rengi yakala!</p>
+        
+        <div id="colorContainer">
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+            <div class="colorBox"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/colorfunctions.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Minobot Blockly</title>
+    <link type="image/png" rel="icon" href="images/icon.png">
+
+    <script src="blockly_uncompressed_horizontal.js"></script>
+    <script src="msg/messages.js"></script>
+    <script src="generators/javascript.js"></script>
+    <script src="generators/javascript/beeminibot.js"></script>
+    <script src="generators/javascript/event.js"></script>
+    <script src="generators/javascript/control.js"></script>
+    <script src="generators/javascript/colour.js"></script>
+
+    <script src="blocks_common/math.js"></script>
+    <script src="blocks_common/text.js"></script>
+    <script src="blocks_common/colour.js"></script>
+
+    <script src="blocks_horizontal/control.js"></script>
+    <script src="blocks_horizontal/event.js"></script>
+    <script src="blocks_horizontal/beeminibot.js"></script>
+    
+    <script src="blocks_horizontal/default_toolbox.js"></script>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/leftpanel.css">
+    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="css/editor-page.css">
+    <link rel="stylesheet" href="css/all.min.css"/>
+    
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/codegenerator.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/appearange-horizontal.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>    
+    <script src="js/infomessage.js"></script>
+
+    <script src="js/acorn.js"></script>
+    <script src="js/interpreter.js"></script>
+    <script src="js/interpreterfunctions.js"></script> 
+    
+    <script src="js/fileoperations.js"></script>    
+    <script src="js/bee-uploader.js"></script>
+
+    <script src="js/ble-libraries/p5.min.js"></script>
+    <script src="js/ble-libraries/p5.ble.js"></script>
+    <script src="js/bluetooth.js"></script>
+
+    <script type="text/javascript">
+      var lang = "tr";
+     
+      if(localStorage.getItem("lang") != "" && localStorage.getItem("lang") != undefined && localStorage.getItem("lang") != null)
+      {
+        if(localStorage.getItem("lang") == "en")
+          lang = "en";
+        else
+          lang = "tr";
+      }
+   
+      document.write('<script src="js/lang/'+ lang + '.js"><\/script>\n');
+    </script>
+
+  </head>
+
+
+  <body style="background-color: #c3cbdf border;" onload="PageLoad()">
+    
+    <!--CSS Spinner-->
+    <div class="spinner-wrapper" id="preloader">
+      <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" style="height: 4rem; background-color:#ff6900; font-size:0.75rem">
+        <div class="col">
+            <img src="images/logobanner.png" class="bannerlogo" onClick="GotoHome();"> 
+
+            <button type="button" class="btn menuButton" id="buttonConnectBLE" onClick="ConnectionBluetooth();" data-toggle="tooltip" data-placement="bottom" title="Connect BLE">
+              <img src="images/connectble.png" style="height: 3rem"> 
+            </button>
+        </div>
+
+        <img class="runButton rounded mx-auto" id="btRun" onclick="RunBee();"/>
+      </div>
+
+      <div class="row">
+          <div class="col-md-12" id="BlocksPannel" style="margin: 0; padding: 0">
+              <div id="blocklyDiv"></div>
+          </div>
+      </div>
+    </div>
+
+    <xml id="toolbox" style="display: none"> 
+      <block type="event_whenplayclicked"></block> 
+
+      <block type="forward"> 
+           <value name="VALUE">
+               <shadow type="stepFNumber">
+                   <field name="STEP">0</field>
+               </shadow>
+           </value>
+      </block> 
+     
+      <block type="backward"> 
+           <value name="VALUE">
+               <shadow type="stepBNumber">
+                   <field name="STEP">0</field>
+               </shadow>
+           </value>
+      </block> 
+      <block type="turnRight"> 
+           <value name="VALUE">
+               <shadow type="stepRNumber">
+                   <field name="STEP">0</field>
+               </shadow>
+           </value>
+      </block> 
+
+      <block type="turnLeft"> 
+           <value name="VALUE">
+               <shadow type="stepLNumber">
+                   <field name="STEP">0</field>
+               </shadow>
+           </value>
+      </block> 
+
+      <block type="control_repeat"> 
+         <value name="TIMES"> 
+             <shadow type="math_whole_number"> 
+                 <field name="NUM">2</field> 
+             </shadow> 
+         </value> 
+      </block> 
+
+      <block type="control_forever"></block> 
+      
+      <block type="control_wait"> 
+         <value name="DURATION"> 
+             <shadow type="math_positive_number"> 
+                 <field name="NUM">1</field> 
+             </shadow> 
+         </value> 
+      </block> 
+
+      <!--fonsiyon blokları-->
+      <block type="fnblock"></block>
+      <block type="call_fn"> 
+        <value name="DURATION"> 
+            <shadow type="math_positive_number"> 
+                <field name="NUM">1</field> 
+            </shadow> 
+        </value> 
+      </block> 
+    </xml>
+
+  </body>
+</html>

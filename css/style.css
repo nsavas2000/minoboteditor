@@ -1,0 +1,508 @@
+*{ margin: 0; padding: 0;}
+
+body {
+  overflow: hidden;
+}
+.container-fluid {
+  overflow: hidden;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+body {
+  background-color: #e5f0ff;
+  font-family: sans-serif;
+  color: #575e75;
+}
+
+
+.alert{
+  display:none;
+}
+
+.bannerlogo{
+  margin: 0.5rem;
+}
+
+.uploadButtonDisabled{
+  content: url('../images/buttons/upload-disabled.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.connectButton
+{
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.connectButton:hover
+{
+  color: white;
+}
+
+.disconnectButton
+{
+  background-color: #ff661a;
+  color: white;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.disconnectButton:hover
+{
+  color: white;
+}
+
+.gotoEditorButton
+{
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.gotoEditorButton:hover
+{
+  color: white;
+}
+
+.uploadButton{
+  content: url('../images/buttons/upload.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.uploadButton:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.compileButtonDisabled{
+  content: url('../images/buttons/compile-disabled.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.compileButton{
+  content: url('../images/buttons/compile.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.compileButton:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+
+
+.saveButton{
+  content: url('../images/buttons/save.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.saveButton:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.settingsButton{
+  content: url('../images/buttons/settings.png');
+  visibility: visible;
+  width: 12vh;
+  height: 12vh;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.settingsButton:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.codeButtonBlock{
+  content: url('../images/buttons/block.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.codeButtonBlock:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.codeButtonJS{
+  content: url('../images/buttons/js.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.codeButtonJS:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+
+.buttonNotConnect{
+  content: url('../images/buttons/ncn.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.buttonNotConnect:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.bluetoothButtonNotConnect{
+  content: url('../images/buttons/bt-ncn.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.bluetoothButtonNotConnect:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.bluetoothButtonConnect{
+  content: url('../images/buttons/bt-cn.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.bluetoothButtonConnect:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.serialNotConnect{
+  content: url('../images/buttons/serial-ncn.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.serialConnect{
+  content: url('../images/buttons/serial-cn.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.pinooButton{
+  content: url('../images/buttons/sensor.png');
+  width: 12vh;
+  height: 12vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.pinooButton:hover{
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.codeDiv
+{
+  color: black;
+  background-color: white;
+  font-size: medium;
+  border: 0px solid;
+  border-color: #aaaa;
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f1f1f1; 
+}
+
+.ace_editor {
+    border: 1px solid lightgray;
+    margin: auto;
+    width: 100%;
+}
+
+.newProject
+{
+  padding: 20px; 
+  font-size: x-large; 
+  text-align: center; 
+  background-color: #7346d0; 
+  height: 30vh;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newProject:hover
+{
+  opacity: 0.8;
+}
+
+.device
+{
+  padding: 10px; 
+  font-size: x-large; 
+  text-align: center; 
+  background-color: #fff; 
+  height: 15vh;
+  border-radius: 5px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 2px;
+}
+
+.device:hover
+{
+  border-color: #ff4d4d;
+}
+
+.deviceName
+{
+  font-weight: bold;
+  color: #575e75;
+}
+
+.deviceNameSelected
+{
+  font-weight: bold;
+  color: red;
+}
+
+.openProject
+{
+  padding: 20px; 
+  font-size: x-large; 
+  text-align: center; 
+  background-color: #f4763c; 
+  height: 30vh;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.openProject:hover
+{
+  opacity: 0.8; 
+}
+
+.indexButtonImage
+{
+  height: 10vh;
+  padding: 0px;
+}
+
+
+
+.playButton{
+  margin-right: 1rem; 
+  margin-left: 15rem;
+  padding: 0px;
+  width: 3rem;; 
+  height: 3rem;
+  transition: transform 0.3s ease;
+}
+.playButton:hover
+{
+  transform: scale(1.2);
+}
+
+
+.connectDevicePanel
+{
+  margin: 5px;
+  padding: 10px; 
+  background-color: #fff; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: small;
+}
+
+.divider {
+    border-right: 1px dashed;
+}
+
+.serialEditor
+{
+  padding: 5px;
+  margin: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaa;
+  resize: none;
+}
+
+.runButton{
+  content: url('../images/buttons/runcode.png');
+  width: 10vh;
+  height: 10vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+  transition: transform 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.runButton:hover{
+  cursor: pointer;
+  opacity: 0.75;
+  transform: scale(1.2);
+
+}
+.runButtonDisabled{
+  content: url('../images/buttons/runcode-disabled.png');
+  width: 10vh;
+  height:10vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+}
+
+.repeatButton{
+  content: url('../images/buttons/repeatcode.png');
+  width: 10vh;
+  height: 10vh;
+  visibility: visible;
+  border-style: none;
+  border-width: 0px;
+  z-index: 101;
+  cursor: pointer;
+  padding: 0.1vh;
+  transition: transform 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.repeatButton:hover{
+  cursor: pointer;
+  opacity: 0.75;
+  transform: scale(1.2);
+
+}
+
+.icon-button {
+  background-color: rgb(201, 85, 85);
+  height: 2rem;
+  color: white;
+  border-radius: 5rem;
+}
+
+.btn-outline-light{
+ margin-top: 0.6rem;
+ margin-left: 1rem;
+ background-color: #B771E5;
+ border-radius: 50%;
+ width: 2.8rem;
+ height: 2.8rem;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

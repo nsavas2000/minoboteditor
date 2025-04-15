@@ -1,0 +1,90 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
+
+.ace_editor {
+    border: 1px solid lightgray;
+    margin: auto;
+    width: 100%;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 0px solid #ccc;
+  background-color: #fff;
+}
+
+.tablinks {
+  font-size: 10pt;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 0px 0px;
+  border: 0px solid #ccc;
+  border-top: none;
+}
+
+.editorTextArea
+{
+  padding: 5px;
+  margin: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaa;
+  border-radius: 10px;
+  resize: none;
+  overflow-y: scroll;
+}
+
+.consoleTextArea
+{
+  padding: 5px;
+  margin: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaa;
+  border-radius: 10px;
+  resize: none;
+  overflow: hidden;
+}

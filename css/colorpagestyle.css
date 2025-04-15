@@ -1,0 +1,228 @@
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #8effcb 0%, #a8e6ff 100%);
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 95%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.camera-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.video-frame {
+    position: relative;
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 4px dashed #ffbe76;
+}
+
+video {
+    width: 100%;
+    max-height: 200px;
+    display: block;
+}
+
+canvas {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+#connect {
+    background: linear-gradient(145deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+#capture {
+    background: linear-gradient(145deg, #ff6a88, #ff99ac);
+    color: white;
+}
+
+#play {
+    background: linear-gradient(145deg, #AA60C8, #724784);
+    color: white;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+#colorContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.colorBox {
+    aspect-ratio: 1/1;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    padding: 2px;
+}
+
+.colorBox:hover {
+    transform: scale(1.05);
+}
+
+.emoji {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.colorBox::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: inherit;
+    filter: blur(4px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#result {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    color: #6c5ce7;
+    padding: 8px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 10px;
+}
+
+.target-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px dashed #ff6b6b;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.minilogo {
+    display: block;
+    margin: 0 auto; /* Yatayda ortalamak için */
+    max-width: 150px; /* Çok büyük ekranlarda aşırı büyümeyi önler */
+    height: auto; /* Oranları korur */
+    margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 576px) {
+    .app-container {
+        padding: 15px;
+        width: 98%;
+    }
+    
+    h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .button-container {
+        gap: 10px;
+    }
+    
+    .action-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    #colorContainer {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+    }
+    
+    .colorBox {
+        font-size: 8px;
+    }
+    
+    .emoji {
+        font-size: 16px;
+    }
+}

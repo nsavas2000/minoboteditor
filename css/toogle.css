@@ -1,0 +1,31 @@
+html{
+  display: flex;
+  justify-content: center;
+}
+
+#container{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ff7c64;
+  border-radius: 20px;
+  width: 40px;
+  height: 30px;
+  margin-top: 0.5rem;
+}
+
+#container input{
+  cursor: pointer;
+  width: 40px;
+  position: absolute;
+  opacity: 0;
+}
+
+#container div{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ff7c64;
+  margin-left: 2px;
+  transition: margin-left 0.3s ease-in, background-color 0.2s ease-in; 
+}
